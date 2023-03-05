@@ -9,9 +9,15 @@ class App:
         host = 'localhost',
         user = 'root',
         password = '',
-        database = 'proyecto_antropometria',
+        database = 'app_antropometria',
         )
         self.cursor = self.conn.cursor()
+
+    def Posicion_pacientes(self):
+        select_pacientes = "use pacientes" 
+        self.cursor.execute(select_pacientes)
+        print("Ahora usted esta trabajando con la tabla pacientes")
+        
 
     def Insertar(self):
         nombre = input("Ingrese nombre: ")
@@ -25,6 +31,16 @@ class App:
         print("Ingresado correctamente \n")
         self.conn.commit()
         os.system('pause')
+
+    def listar_pacientes(self):
+        todo = "select * from pacientes"
+        self.cursor.execute(todo)
+
+    def eliminar(self):
+        borrar = "delete "
+
+
+
 
 
 
