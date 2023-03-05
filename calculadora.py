@@ -15,11 +15,16 @@ Bienvenido Dr/a a la calculadora antropometrica
 4 - Salir
         """)
         
-    opcion = int (input("Seleccione el numero de la operacion a realizar "))
+    opcion = int (input("Seleccione el numero de la operacion a realizar: "))
 
     
     if opcion == 1:
-        print("<<<< Insertar nuevo paciente >>>>")  
+        acciones = App
+        acciones.__init__()
+        acciones.Posicion_pacientes()
+        acciones.Insertar()
+        
+        
         
 
     elif opcion == 2:
@@ -28,9 +33,7 @@ Bienvenido Dr/a a la calculadora antropometrica
         # Poner todos los datos que vamos a utilizar para una antropometira, todas las variables que vamos a utilizar, luego hacer todas las funciones 
 
     elif opcion == 3:
-        print("")
-        print("<<<< Lista de pacientes >>>>")
-        print("")
+        acciones.listar_pacientes()
 
     elif opcion == 4:
         print("Muchas gracias por usar nuestro programa")
